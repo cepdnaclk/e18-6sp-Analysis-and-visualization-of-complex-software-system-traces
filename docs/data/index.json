@@ -22,7 +22,8 @@
             "email": "asithab@eng.pdn.ac.lk"
         },
         {
-            "name": "Rostislav Yavorskiy"
+            "name": "Rostislav Yavorskiy",
+            "email": "#"
         }
     ],
     "tags": ['Machine Learning','NLP','Log Analysis','Log Visualization']
