@@ -1,7 +1,9 @@
 ___
-# DELETE THIS INSTRUCTIONS AND ADD A SHORT INTRODUCTION ABOUT YOUR PROJECT
+# ANALYSIS AND VISUALIZATION OF COMPLEX SOFTWARE SYSTEM TRACES
 ___
+## QA for Fintech Applications using Machine Learning
+![image](https://github.com/cepdnaclk/e18-6sp-Analysis-and-visualization-of-complex-software-system-traces/assets/73756777/9a636798-2ed4-448b-8e23-baaa52a02471)
+![image](https://github.com/cepdnaclk/e18-6sp-Analysis-and-visualization-of-complex-software-system-traces/assets/73756777/cc7dc112-2b63-49cd-85ad-d26643aee49c)
+![image](https://github.com/cepdnaclk/e18-6sp-Analysis-and-visualization-of-complex-software-system-traces/assets/73756777/fd023087-8109-47fc-88dd-7841c1d08b0b)
 
-## Please refer the instructions in below URL:
 
-https://projects.ce.pdn.ac.lk/docs/how-to-add-a-project
