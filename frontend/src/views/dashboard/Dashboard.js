@@ -181,6 +181,7 @@ const Dashboard = () => {
   return (
     <>
       <WidgetsDropdown />
+      {/* this widgets drop down is the one with color box on top of the dashboard  */}
       <CCard className="mb-4">
         <CCardBody>
           <CRow>
@@ -309,13 +310,17 @@ const Dashboard = () => {
       </CCard>
 
       <WidgetsBrand withCharts />
+      {/* facebook and twitter one is withCharts */}
 
       <CRow>
+        {/* this CRow contains Taffic Sales part and User country usage part : both */}
         <CCol xs>
           <CCard className="mb-4">
             <CCardHeader>Traffic {' & '} Sales</CCardHeader>
             <CCardBody>
               <CRow>
+                {/* this CRow has the first part  */}
+                {/* in that first part is devided in to 2 cols */}
                 <CCol xs={12} md={6} xl={6}>
                   <CRow>
                     <CCol sm={6}>
@@ -398,7 +403,7 @@ const Dashboard = () => {
               </CRow>
 
               <br />
-
+              {/* Ctable with User Country Usage part */}
               <CTable align="middle" className="mb-0 border" hover responsive>
                 <CTableHead color="light">
                   <CTableRow>
@@ -450,6 +455,7 @@ const Dashboard = () => {
                   ))}
                 </CTableBody>
               </CTable>
+              {/* = = = = = = */}
             </CCardBody>
           </CCard>
         </CCol>
