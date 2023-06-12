@@ -89,19 +89,10 @@ const Dashboard = () => {
 
   const statsTable = [
     {
-      user: {
-        name: 'Yiorgos Avraamu',
-        new: true,
-        registered: 'Jan 1, 2021',
-      },
-      country: { name: 'USA', flag: cifUs },
-      usage: {
-        value: 50,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'success',
-      },
-      payment: { name: 'Mastercard', icon: cibCcMastercard },
-      activity: '10 sec ago',
+      name: '2015/2015-CW-9/lphost18_wls2_unix-process_prod-appserver_2015.03.01_00.00.01.csv',
+      columns: 13,
+      size: '156K',
+      line_count: '1419',
     },
   ]
 
@@ -390,9 +381,9 @@ const Dashboard = () => {
                 <CIcon icon={cilPeople} />
               </CTableHeaderCell> */}
               <CTableHeaderCell>File Name</CTableHeaderCell>
-              <CTableHeaderCell>Size</CTableHeaderCell>
               <CTableHeaderCell>Number of Columns</CTableHeaderCell>
-              <CTableHeaderCell>Number of Rows</CTableHeaderCell>
+              <CTableHeaderCell>Size</CTableHeaderCell>
+              <CTableHeaderCell>Line Count</CTableHeaderCell>
               {/* <CTableHeaderCell>Activity</CTableHeaderCell> */}
             </CTableRow>
           </CTableHead>
@@ -403,28 +394,31 @@ const Dashboard = () => {
                   <CAvatar size="md" src={item.avatar.src} status={item.avatar.status} />
                 </CTableDataCell> */}
                 <CTableDataCell>
-                  <div>{item.user.name}</div>
-                  <div className="small text-medium-emphasis">
+                  <div>{item.name}</div>
+                  {/* <div className="small text-medium-emphasis">
                     <span>{item.user.new ? 'New' : 'Recurring'}</span> | Registered:{' '}
                     {item.user.registered}
-                  </div>
-                </CTableDataCell>
-                <CTableDataCell className="text-center">
-                  <CIcon size="xl" icon={item.country.flag} title={item.country.name} />
+                  </div> */}
                 </CTableDataCell>
                 <CTableDataCell>
-                  <div className="clearfix">
+                  <div>{item.columns}</div>
+                  {/* <CIcon size="xl" icon={item.country.flag} title={item.country.name} /> */}
+                </CTableDataCell>
+                <CTableDataCell>
+                  <div>{item.size}</div>
+                  {/* <div className="clearfix">
                     <div className="float-start">
                       <strong>{item.usage.value}%</strong>
                     </div>
                     <div className="float-end">
                       <small className="text-medium-emphasis">{item.usage.period}</small>
                     </div>
-                  </div>
-                  <CProgress thin color={item.usage.color} value={item.usage.value} />
+                  </div> */}
+                  {/* <CProgress thin color={item.usage.color} value={item.usage.value} /> */}
                 </CTableDataCell>
-                <CTableDataCell className="text-center">
-                  <CIcon size="xl" icon={item.payment.icon} />
+                <CTableDataCell>
+                  <div>{item.line_count}</div>
+                  {/* <CIcon size="xl" icon={item.payment.icon} /> */}
                 </CTableDataCell>
                 {/* <CTableDataCell>
                   <div className="small text-medium-emphasis">Last login</div>
