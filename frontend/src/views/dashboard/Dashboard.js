@@ -87,9 +87,8 @@ const Dashboard = () => {
     { title: 'LinkedIn', icon: cibLinkedin, percent: 8, value: '27,319' },
   ]
 
-  const tableExample = [
+  const statsTable = [
     {
-      avatar: { src: avatar1, status: 'success' },
       user: {
         name: 'Yiorgos Avraamu',
         new: true,
@@ -103,78 +102,6 @@ const Dashboard = () => {
       },
       payment: { name: 'Mastercard', icon: cibCcMastercard },
       activity: '10 sec ago',
-    },
-    {
-      avatar: { src: avatar2, status: 'danger' },
-      user: {
-        name: 'Avram Tarasios',
-        new: false,
-        registered: 'Jan 1, 2021',
-      },
-      country: { name: 'Brazil', flag: cifBr },
-      usage: {
-        value: 22,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'info',
-      },
-      payment: { name: 'Visa', icon: cibCcVisa },
-      activity: '5 minutes ago',
-    },
-    {
-      avatar: { src: avatar3, status: 'warning' },
-      user: { name: 'Quintin Ed', new: true, registered: 'Jan 1, 2021' },
-      country: { name: 'India', flag: cifIn },
-      usage: {
-        value: 74,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'warning',
-      },
-      payment: { name: 'Stripe', icon: cibCcStripe },
-      activity: '1 hour ago',
-    },
-    {
-      avatar: { src: avatar4, status: 'secondary' },
-      user: { name: 'Enéas Kwadwo', new: true, registered: 'Jan 1, 2021' },
-      country: { name: 'France', flag: cifFr },
-      usage: {
-        value: 98,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'danger',
-      },
-      payment: { name: 'PayPal', icon: cibCcPaypal },
-      activity: 'Last month',
-    },
-    {
-      avatar: { src: avatar5, status: 'success' },
-      user: {
-        name: 'Agapetus Tadeáš',
-        new: true,
-        registered: 'Jan 1, 2021',
-      },
-      country: { name: 'Spain', flag: cifEs },
-      usage: {
-        value: 22,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'primary',
-      },
-      payment: { name: 'Google Wallet', icon: cibCcApplePay },
-      activity: 'Last week',
-    },
-    {
-      avatar: { src: avatar6, status: 'danger' },
-      user: {
-        name: 'Friderik Dávid',
-        new: true,
-        registered: 'Jan 1, 2021',
-      },
-      country: { name: 'Poland', flag: cifPl },
-      usage: {
-        value: 43,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
-        color: 'success',
-      },
-      payment: { name: 'Amex', icon: cibCcAmex },
-      activity: 'Last week',
     },
   ]
 
@@ -414,7 +341,7 @@ const Dashboard = () => {
                   </CTableRow>
                 </CTableHead>
                 <CTableBody>
-                  {tableExample.map((item, index) => (
+                  {statsTable.map((item, index) => (
                     <CTableRow v-for="item in tableItems" key={index}>
                       <CTableDataCell className="text-center">
                         <CAvatar size="md" src={item.avatar.src} status={item.avatar.status} />
@@ -459,22 +386,22 @@ const Dashboard = () => {
         <CTable align="middle" className="mb-0 border" hover responsive>
           <CTableHead color="light">
             <CTableRow>
-              <CTableHeaderCell className="text-center">
+              {/* <CTableHeaderCell className="text-center">
                 <CIcon icon={cilPeople} />
-              </CTableHeaderCell>
-              <CTableHeaderCell>User</CTableHeaderCell>
-              <CTableHeaderCell className="text-center">Country</CTableHeaderCell>
-              <CTableHeaderCell>Usage</CTableHeaderCell>
-              <CTableHeaderCell className="text-center">Payment Method</CTableHeaderCell>
-              <CTableHeaderCell>Activity</CTableHeaderCell>
+              </CTableHeaderCell> */}
+              <CTableHeaderCell>File Name</CTableHeaderCell>
+              <CTableHeaderCell>Size</CTableHeaderCell>
+              <CTableHeaderCell>Number of Columns</CTableHeaderCell>
+              <CTableHeaderCell>Number of Rows</CTableHeaderCell>
+              {/* <CTableHeaderCell>Activity</CTableHeaderCell> */}
             </CTableRow>
           </CTableHead>
           <CTableBody>
-            {tableExample.map((item, index) => (
+            {statsTable.map((item, index) => (
               <CTableRow v-for="item in tableItems" key={index}>
-                <CTableDataCell className="text-center">
+                {/* <CTableDataCell className="text-center">
                   <CAvatar size="md" src={item.avatar.src} status={item.avatar.status} />
-                </CTableDataCell>
+                </CTableDataCell> */}
                 <CTableDataCell>
                   <div>{item.user.name}</div>
                   <div className="small text-medium-emphasis">
@@ -499,10 +426,10 @@ const Dashboard = () => {
                 <CTableDataCell className="text-center">
                   <CIcon size="xl" icon={item.payment.icon} />
                 </CTableDataCell>
-                <CTableDataCell>
+                {/* <CTableDataCell>
                   <div className="small text-medium-emphasis">Last login</div>
                   <strong>{item.activity}</strong>
-                </CTableDataCell>
+                </CTableDataCell> */}
               </CTableRow>
             ))}
           </CTableBody>
