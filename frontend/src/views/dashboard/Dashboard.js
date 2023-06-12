@@ -1,4 +1,6 @@
 import React from 'react'
+// import data from './file_info.json'
+import data from '../../logStat/file_info'
 
 import {
   CAvatar,
@@ -86,7 +88,6 @@ const Dashboard = () => {
     { title: 'Twitter', icon: cibTwitter, percent: 11, value: '37,564' },
     { title: 'LinkedIn', icon: cibLinkedin, percent: 8, value: '27,319' },
   ]
-
   const statsTable = [
     {
       name: '2015/2015-CW-9/lphost18_wls2_unix-process_prod-appserver_2015.03.01_00.00.01.csv',
@@ -95,7 +96,6 @@ const Dashboard = () => {
       line_count: '1419',
     },
   ]
-
   return (
     <>
       {/* <WidgetsDropdown /> */}
@@ -388,7 +388,7 @@ const Dashboard = () => {
             </CTableRow>
           </CTableHead>
           <CTableBody>
-            {statsTable.map((item, index) => (
+            {data.map((item, index) => (
               <CTableRow v-for="item in tableItems" key={index}>
                 {/* <CTableDataCell className="text-center">
                   <CAvatar size="md" src={item.avatar.src} status={item.avatar.status} />
