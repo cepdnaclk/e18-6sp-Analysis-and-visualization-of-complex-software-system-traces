@@ -31,7 +31,7 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarBrand className="d-none d-md-flex" to="/">
-        <CImage rounded thumbnail src={ExactProImg} width={500} height={200} />
+        <CImage rounded thumbnail src={ExactProImg} width={400} height={150} />
         <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
       </CSidebarBrand>
       <CSidebarNav>
