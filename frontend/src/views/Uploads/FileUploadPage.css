@@ -1,0 +1,48 @@
+/* FileUploadPage.css */
+.file-upload-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://cdn.pixabay.com/photo/2021/10/11/00/59/upload-6699084_1280.png');
+  background-size: 50% auto; /* Adjust the size as needed */
+  background-position: center;
+  background-repeat: no-repeat; /* Ensure the image is not repeated */
+}
+
+.centered-container {
+  text-align: center;
+}
+
+.dropzone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent background */
+  border-radius: 8px;
+  max-width: 300px;
+  margin: 1 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.dropzone.active {
+  background-color: #f0f0f0;
+}
+
+.dropzone p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.dropzone span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}

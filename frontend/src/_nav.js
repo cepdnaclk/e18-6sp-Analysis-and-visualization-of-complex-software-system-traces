@@ -34,7 +34,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Upload Logs',
-    to: '/widgets',
+    to: '/uploads',
     icon: <CIcon icon={cilCloudUpload} customClassName="nav-icon" />,
   },
   {
