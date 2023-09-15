@@ -55,6 +55,7 @@ def head_of_file():
     try:
         with open("uploads/"+request.args.get("filename")) as f:
             linesList = list()
+            f.readline()
             for x in range(10):
                 linesList.append(f.readline())
             
