@@ -100,7 +100,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'About Us',
-    to: '/widgets',
+    to: '/aboutus',
     icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
   }
 ]
