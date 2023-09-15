@@ -57,6 +57,8 @@ const AboutUs = React.lazy(() => import('./views/AboutUs/aboutus.js'))
 const ShowHead = React.lazy(()=> import('./views/ShowHead/showhead.js'))
 const analytics = React.lazy(() => import('./views/Analytics/analytics.js'))
 const statistics = React.lazy(() => import('./views/Statistics/statistics.js'))
+const template = React.lazy(() => import('./views/Template/template.js'))
+
 
 
 
@@ -109,8 +111,8 @@ const routes = [
   { path: '/aboutus', name: 'About Us', element: AboutUs },
   { path: '/showhead/:filename', name: 'Show Head', element: ShowHead },
   { path: '/analytics', name: 'Analytics', element: analytics },
-  { path: '/statistics', name: 'Statistics', element: statistics }
-
+  { path: '/statistics', name: 'Statistics', element: statistics },
+  { path: '/template', name: 'Template', element: template }
 ]
 
 

@@ -89,13 +89,25 @@ const TableDisplay = () => {
         </tbody>
       </table>
       <div className="image-container" >
-                  <center>
+        <center>
 
-      <img src={image1} alt="Description of the image" className="img-small" />
-      <img src={image2} alt="Description of the image" className="img-small" />
-      <img src={image3} alt="Description of the image" className="img-small"/>
-      <img src={image4} alt="Description of the image" className="img-small"/>
-                  </center>
+          <h2>Box Plot of outliers</h2>
+          <img src={image1} alt="Description of the image" className="img-small" />
+          <p style={{ textAlign: 'justify' }}>
+            The &apos;Box Plot of Outliers&apos; graphically represents data for five categories on the x-axis: &apos;ProcessMEM,&apos; &apos;ProcessJAVA,&apos; &apos;ProcessJavaCPU,&apos; &apos;ProcessJavaPR,&apos; and &apos;ProcessJavaW.&apos; The y-axis covers a range from 0 to 160 in increments of 20, indicating data values within this specific numerical range. This plot uses a box-and-whisker format to visualize data distribution and identify potential outliers.
+          </p>
+
+          <h2>\Process(java)\MEM vs Date</h2>
+          <img src={image2} alt="Description of the image" className="img-small" />
+          <p style={{ textAlign: 'justify' }}>A memory usage plot depicting the performance of a Java process over time, with associated dates, offers a comprehensive view of the applications memory management. By analyzing this plot, one can discern patterns in memory consumption, pinpoint potential memory leaks through sudden and persistent spikes, and recognize the effects of garbage collection events on memory utilization. This visualization is instrumental in assessing the overall health and efficiency of the Java application, aiding in the identification and resolution of memory-related issues.</p>
+
+          <h2>\Process(java)\CPU vs Date</h2>
+          <img src={image3} alt="Description of the image" className="img-small" />
+          <p style={{ textAlign: 'justify' }}>A CPU usage plot, accompanied by timestamps, provides a valuable perspective on the performance of a Java process. This plot allows for the analysis of CPU utilization trends over time, offering insights into how efficiently the Java application utilizes computational resources. By examining this plot, one can identify patterns in CPU usage, such as periods of high or low activity, potential bottlenecks, or excessive resource consumption. This visualization is instrumental in evaluating the applications overall computational efficiency and assists in diagnosing and optimizing performance-related issues.</p>
+
+          <h2>\Process(java)\Time vs Date</h2>
+          <img src={image4} alt="Description of the image" className="img-small" />
+        </center>
       </div>
 
     </div>
