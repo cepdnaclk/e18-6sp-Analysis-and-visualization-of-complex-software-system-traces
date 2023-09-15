@@ -24,8 +24,26 @@
   background-color: #f0f0f0; /* Background color */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 80%; /* Limit the width */
-  margin: 0 auto;
+  margin: 20px auto; /* Added margin for padding from outside */
 }
+
+
+.route-button {
+  font-size: 18px;
+  padding: 15px 30px;
+  background-color: #117E8E;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.route-button:hover {
+  background-color: #0a4f5c;
+}
+
+/* Add any additional styles you may need */
 
 /* Add any additional styles you may need */
 
