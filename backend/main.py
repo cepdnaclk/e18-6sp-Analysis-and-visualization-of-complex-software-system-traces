@@ -2,7 +2,9 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 import ml
-import asyncio
+
+from concurrent.futures import ThreadPoolExecutor
+threadpool = ThreadPoolExecutor(max_workers=5)
 
 # Create a Flask web application
 app = Flask(__name__)
@@ -16,6 +18,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 predictionResults = {}
 
+def runPrediction(filePath):
+    predictionResults[filePath] = ml.getPrediction(filePath)
  
 # Define a route for the home page
 @app.route('/')
@@ -41,8 +45,7 @@ def upload_file():
     file.save(filePath)
     # For example, you can save it to a specific directory.
         
-    result = ml.getPrediction(filePath)
-    predictionResults[filePath] = result
+    threadpool.submit(runPrediction, filePath)
 
     # For demonstration, let's just return a success message.
     return jsonify({'message': 'File successfully uploaded',"success":True,"filename":file.filename})
