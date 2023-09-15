@@ -29,15 +29,11 @@ def getPrediction(filePath):
     new_log_columns = clean_and_preprocess(new_log_file.columns.tolist())
 
     # Initialize variables to track the most similar cluster
-    most_similar_cluster = None
-    highest_similarity = 0.0
-
+    predictions = {}
     # Compare the new log file columns with each cluster's word set
     for cluster_num, cluster_words in cluster_word_sets.items():
         sim_score = similarity(new_log_columns, cluster_words)
-        if sim_score > highest_similarity:
-            highest_similarity = sim_score
-            most_similar_cluster = int(cluster_num) + 1
+        predictions[int(cluster_num) + 1] = sim_score
 
     # Print the cluster that the new log file belongs to
-    return f"The new log file belongs to Cluster {most_similar_cluster}"
+    return predictions
