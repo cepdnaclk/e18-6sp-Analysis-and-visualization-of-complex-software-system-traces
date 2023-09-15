@@ -37,7 +37,12 @@ const Dashboard = () => {
             const scatterDataset = {
               label: 'Cluster Visualization',
               backgroundColor: '#FF6384',
-              data: [{ x: 1, y: 2 }, { x: 5, y: 7 }], // Your scatter data points
+              data: [{ x: -0.16628224576531744, y: -0.46752753839620764 },
+                { x: 0.021862855125790885, y: 0.4416279852040878 },
+                { x: 0.5298954069774545, y: -0.001482104970024194 },
+                { x: -0.5492630085936232, y: 0.573742695464002 },
+                { x: -0.44202036535002687, y: -0.5339749522107007 },
+                { x: 0.6058073576057241, y: -0.012386085091157536 }], // Your scatter data points
             };
 
             setScatterData({ datasets: [scatterDataset] });
