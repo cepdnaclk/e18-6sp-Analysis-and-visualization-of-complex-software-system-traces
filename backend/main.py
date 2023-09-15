@@ -43,6 +43,23 @@ def upload_file():
     # For demonstration, let's just return a success message.
     return jsonify({'message': 'File successfully uploaded'})
 
+@app.route('/head_of_file', methods=['get'])
+def head_of_file():
+    try:
+        with open("uploads/"+request.args.get("filename")) as f:
+            linesList = list()
+            for x in range(10):
+                linesList.append(f.readline())
+            
+        linesList = list(map(str.strip, linesList))
+        
+        return jsonify({
+            "fileName": request.args.get("filename"),
+            "lines": linesList
+        })
+    except Exception as e:
+        return jsonify({"status":"error" + e })
+    
 # Run the Flask app
 if __name__ == '__main__':
     app.run(debug=True)
