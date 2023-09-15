@@ -52,39 +52,39 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Charts',
-    to: '/charts',
+    name: 'Statistics',
+    to: '/statistics',
     icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
   },
-  {
-    component: CNavGroup,
-    name: 'Icons',
-    to: '/icons/coreui-icons',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'CoreUI Free',
-        to: '/icons/coreui-icons',
-        badge: {
-          color: 'success',
-          text: 'NEW',
-        },
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Notifications',
-    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Alerts',
-        to: '/notifications/alerts',
-      },
-    ],
-  },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Icons',
+  //   to: '/icons/coreui-icons',
+  //   icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'CoreUI Free',
+  //       to: '/icons/coreui-icons',
+  //       badge: {
+  //         color: 'success',
+  //         text: 'NEW',
+  //       },
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Notifications',
+  //   icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Alerts',
+  //       to: '/notifications/alerts',
+  //     },
+  //   ],
+  // },
   {
     component: CNavItem,
     name: 'About Us',

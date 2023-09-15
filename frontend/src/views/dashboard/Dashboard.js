@@ -70,6 +70,7 @@ const Dashboard = () => {
   return (
     <>
       <CRow>
+        <center>
       <CCol xs={8}>
         <CCard className="mb-4">
           <CCardHeader>Number of Data Frames in Each Cluster</CCardHeader>
@@ -90,6 +91,7 @@ const Dashboard = () => {
           </CCardBody>
         </CCard>
       </CCol>
+      </center>
 <CTable align="middle" className="mb-0 border" hover responsive>
   <CTableHead color="light">
     <CTableRow>
