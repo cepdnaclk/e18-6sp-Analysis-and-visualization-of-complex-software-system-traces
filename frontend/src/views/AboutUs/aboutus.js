@@ -17,11 +17,23 @@ const AboutUsPage = () => {
         </div>
         <div className="section">
           <h2>Team Members</h2>
-          <ul>
-            <li>Ishan Fernando - <a href="mailto:e18098@eng.pdn.ac.lk">e18098@eng.pdn.ac.lk</a></li>
-            <li>Adeepa Fernando - <a href="mailto:e18100@eng.pdn.ac.lk">e18100@eng.pdn.ac.lk</a></li>
-            <li>Ridma Jayasundara - <a href="mailto:e18155@eng.pdn.ac.lk">e18155@eng.pdn.ac.lk</a></li>
-          </ul>
+          <center>
+
+            <div className="team-members">
+              <div className="team-member">
+                <img src="https://people.ce.pdn.ac.lk/images/students/e18/e18098.jpg" alt="Ishan Fernando" width="150" height="150"></img>
+                <p>Ishan Fernando - <a href="mailto:e18098@eng.pdn.ac.lk">e18098@eng.pdn.ac.lk</a></p>
+              </div>
+              <div className="team-member">
+                <img src="https://people.ce.pdn.ac.lk/images/students/e18/e18100.jpg" alt="Adeepa Fernando" width="150" height="150"></img>
+                <p>Adeepa Fernando - <a href="mailto:e18100@eng.pdn.ac.lk">e18100@eng.pdn.ac.lk</a></p>
+              </div>
+              <div className="team-member">
+                <img src="https://people.ce.pdn.ac.lk/images/students/e18/e18155.jpg" alt="Ridma Jayasundara" width="150" height="150"></img>
+                <p>Ridma Jayasundara - <a href="mailto:e18155@eng.pdn.ac.lk">e18155@eng.pdn.ac.lk</a></p>
+              </div>
+            </div>
+          </center>
         </div>
         <div className="section">
           <h2>Product Owners</h2>
@@ -48,7 +60,7 @@ const AboutUsPage = () => {
           </p>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
