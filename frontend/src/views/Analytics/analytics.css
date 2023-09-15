@@ -1,0 +1,32 @@
+/* analytics.css */
+
+.topic-heading-fancy {
+  font-size: 24px;
+  color: #117E8E;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 70%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.description {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  color: #555; /* Adjust the color */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f0f0; /* Background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 80%; /* Limit the width */
+  margin: 0 auto;
+}
+
+/* Add any additional styles you may need */
+
+
