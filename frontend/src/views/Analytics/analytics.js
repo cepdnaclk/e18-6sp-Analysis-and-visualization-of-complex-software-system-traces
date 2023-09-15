@@ -98,7 +98,7 @@ const Dashboard = () => {
           </CCol>
         </center>
       </CRow>
-      <DescriptionComponent />
+      <DescriptionComponent2 />
 
       <CRow>
         <center>
