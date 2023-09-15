@@ -1,1 +1,4 @@
 flask
+pandas
+gensim
+protobuf==3.20

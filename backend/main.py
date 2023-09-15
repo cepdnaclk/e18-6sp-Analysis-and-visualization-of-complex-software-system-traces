@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
+import ml
+import asyncio
 
 # Create a Flask web application
 app = Flask(__name__)
@@ -12,6 +14,9 @@ cors = CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "http:/
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+predictionResults = {}
+
+ 
 # Define a route for the home page
 @app.route('/')
 def hello_world():
@@ -32,8 +37,12 @@ def upload_file():
         os.makedirs(app.config['UPLOAD_FOLDER'])
 
     # Save the uploaded file to the 'uploads' directory
-    file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+    filePath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+    file.save(filePath)
     # For example, you can save it to a specific directory.
+        
+    result = ml.getPrediction(filePath)
+    predictionResults[filePath] = result
 
     # For demonstration, let's just return a success message.
     return jsonify({'message': 'File successfully uploaded',"success":True,"filename":file.filename})
@@ -55,6 +64,12 @@ def head_of_file():
     except Exception as e:
         return jsonify({"status":"error" + e })
     
+# Define a route for the home page
+@app.route('/predictions')
+def predictions():
+    global predictionResults
+    return jsonify(predictionResults)
+
 # Run the Flask app
 if __name__ == '__main__':
     app.run(debug=True)
