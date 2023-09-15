@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileUpload } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const FileUploadPage = () => {
   const navigate = useNavigate();
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const onDrop = useCallback(async (acceptedFiles) => {
     // Handle the uploaded files here
@@ -34,14 +35,21 @@ const FileUploadPage = () => {
 
       // Check the response and navigate to a new page if needed
       if (response.data.success) {
-        // Redirect to the new page with the filename as a URL parameter
-        navigate(`/showhead/${response.data.filename}`);
+        // Show the success message and hide other elements
+        setShowSuccessMessage(true);
+        document.querySelector('.dropzone').style.display = 'none';
+
+        // Hide the success message and navigate after 3 seconds
+        setTimeout(() => {
+          setShowSuccessMessage(false);
+          navigate(`/showhead/${response.data.filename}`);
+        }, 1000);
       }
     } catch (error) {
       // Handle any errors that occur during the request
       console.error('Error uploading files:', error);
     }
-  },); // Include history in the dependencies array
+  }, [navigate]);
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
@@ -61,6 +69,11 @@ const FileUploadPage = () => {
           </p>
         )}
       </div>
+      {showSuccessMessage && (
+        <div className="success-message">
+          <p style={{ backgroundColor: 'green', color: 'white' }}>Upload successful!</p>
+        </div>
+      )}
     </div>
   );
 };
