@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { CCard, CCardHeader, CCardBody, CRow, CCol } from '@coreui/react';
 import { CChartBar, CChartScatter } from '@coreui/react-chartjs';
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import image1 from './image1.png';
 import './analytics.css';  // Import a CSS file for custom styles
 
@@ -83,6 +84,11 @@ const Dashboard = () => {
       <CRow>
         <CCol md={12}>
           <div className="topic-heading-fancy">Template Based Approach</div>
+          <center>
+          <Link to="/template">
+            <button className="route-button">Go to Template</button>
+          </Link>
+          </center>
           <DescriptionComponent />
         </CCol>
       </CRow>
