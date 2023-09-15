@@ -10,9 +10,7 @@ const DescriptionComponent = () => {
   return (
     <div className="description">
       <p>
-        This is a demo description for the Template Based Approach.
-        You can replace this with a more detailed and informative description about the template-based approach.
-      </p>
+      This approach represents an intermediate step between log hashing and regular expressions.      </p>
     </div>
   );
 };
@@ -21,9 +19,7 @@ const DescriptionComponent2 = () => {
   return (
     <div className="description">
       <p>
-        This is the second description for the Template Based Approach.
-        You can replace this with a more detailed and informative description about the template-based approach.
-      </p>
+      Employing a brute-force string comparison method, comparing each log message with others., two messages are considered part of different templates if they differ by at least 20% of their content, determined by the total length of common non-intersecting substrings larger than three characters      </p>
     </div>
   );
 };
