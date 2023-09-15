@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # Configure CORS with a list of allowed origins
-cors = CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "https://example.com"]}})
+cors = CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "http://log-analysis.com:3000"]}})
 
 # Define the directory where you want to save the uploaded files
 UPLOAD_FOLDER = 'uploads'
@@ -36,7 +36,7 @@ def upload_file():
     # For example, you can save it to a specific directory.
 
     # For demonstration, let's just return a success message.
-    return jsonify({'message': 'File successfully uploaded'})
+    return jsonify({'message': 'File successfully uploaded',"success":True,"filename":file.filename})
 
 @app.route('/head_of_file', methods=['get'])
 def head_of_file():
