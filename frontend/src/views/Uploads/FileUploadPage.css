@@ -5,7 +5,7 @@
   align-items: center;
   height: 100vh;
   background-image: url('https://cdn.pixabay.com/photo/2021/10/11/00/59/upload-6699084_1280.png');
-  background-size: 50% auto; /* Adjust the size as needed */
+  background-size: 10% auto; /* Adjust the size as needed */
   background-position: center;
   background-repeat: no-repeat; /* Ensure the image is not repeated */
 }
@@ -21,7 +21,11 @@
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent background */
   border-radius: 8px;
-  max-width: 300px;
+  /* max-width: 800px; */
+  width: 600px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
   margin: 1 auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
