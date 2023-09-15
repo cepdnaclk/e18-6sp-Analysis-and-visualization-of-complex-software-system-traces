@@ -35,6 +35,9 @@ def upload_file():
     file = request.files['file']
     if file.filename == '':
         return jsonify({'error': 'No selected file'})
+    
+    if ".csv" not in file.filename:
+        return jsonify({"success": False})
 
     # Ensure the 'uploads' directory exists
     if not os.path.exists(app.config['UPLOAD_FOLDER']):
