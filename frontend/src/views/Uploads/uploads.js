@@ -45,7 +45,7 @@ const FileUploadPage = () => {
           setTimeout(() => {
             setShowSuccessMessage(false)
             navigate(`/showhead/${response.data.filename}`)
-          }, 1000)
+          }, 3500)
         } else {
           // Show the success message and hide other elements
           setShowFailMessage(true)

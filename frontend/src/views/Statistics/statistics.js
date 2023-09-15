@@ -105,7 +105,7 @@ const TableDisplay = () => {
           <img src={image3} alt="Description of the image" className="img-small" />
           <p style={{ textAlign: 'justify' }}>A CPU usage plot, accompanied by timestamps, provides a valuable perspective on the performance of a Java process. This plot allows for the analysis of CPU utilization trends over time, offering insights into how efficiently the Java application utilizes computational resources. By examining this plot, one can identify patterns in CPU usage, such as periods of high or low activity, potential bottlenecks, or excessive resource consumption. This visualization is instrumental in evaluating the applications overall computational efficiency and assists in diagnosing and optimizing performance-related issues.</p>
 
-          <h2>\Process(java)\Time vs Date</h2>
+          <h2>K-Means Clustering</h2>
           <img src={image4} alt="Description of the image" className="img-small" />
         </center>
       </div>
