@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import './ShowHead.css'; // Import the CSS file for styling
 
 const ShowHead = () => {
   const { filename } = useParams(); // Extract filename from URL parameter
@@ -25,7 +26,7 @@ const ShowHead = () => {
   return (
     <div>
       <h2>File: {fileData.fileName}</h2>
-      <table>
+      <table className="styled-table">
         <thead>
           <tr>
             <th>File Contents</th>
