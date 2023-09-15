@@ -22,11 +22,6 @@ def upload_file():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'})
 
-    file = request.files['file']
-    print(file.filename)
-    if file.filename == '':
-        return jsonify({'error': 'No selected file'})
-
     # You can process the uploaded file here.
     file = request.files['file']
     if file.filename == '':
