@@ -70,60 +70,58 @@ const Dashboard = () => {
   return (
     <>
       <CRow>
-        <CTable align="middle" className="mb-0 border" hover responsive>
-          <CTableHead color="light">
-            <CTableRow>
-              {/* <CTableHeaderCell className="text-center">
-                <CIcon icon={cilPeople} />
-              </CTableHeaderCell> */}
-              <CTableHeaderCell>File Name</CTableHeaderCell>
-              <CTableHeaderCell>Number of Columns</CTableHeaderCell>
-              <CTableHeaderCell>Size</CTableHeaderCell>
-              <CTableHeaderCell>Line Count</CTableHeaderCell>
-              {/* <CTableHeaderCell>Activity</CTableHeaderCell> */}
-            </CTableRow>
-          </CTableHead>
-          <CTableBody>
-            {data.map((item, index) => (
-              <CTableRow v-for="item in tableItems" key={index}>
-                {/* <CTableDataCell className="text-center">
-                  <CAvatar size="md" src={item.avatar.src} status={item.avatar.status} />
-                </CTableDataCell> */}
-                <CTableDataCell>
-                  <div>{item.name}</div>
-                  {/* <div className="small text-medium-emphasis">
-                    <span>{item.user.new ? 'New' : 'Recurring'}</span> | Registered:{' '}
-                    {item.user.registered}
-                  </div> */}
-                </CTableDataCell>
-                <CTableDataCell>
-                  <div>{item.columns}</div>
-                  {/* <CIcon size="xl" icon={item.country.flag} title={item.country.name} /> */}
-                </CTableDataCell>
-                <CTableDataCell>
-                  <div>{item.size}</div>
-                  {/* <div className="clearfix">
-                    <div className="float-start">
-                      <strong>{item.usage.value}%</strong>
-                    </div>
-                    <div className="float-end">
-                      <small className="text-medium-emphasis">{item.usage.period}</small>
-                    </div>
-                  </div> */}
-                  {/* <CProgress thin color={item.usage.color} value={item.usage.value} /> */}
-                </CTableDataCell>
-                <CTableDataCell>
-                  <div>{item.line_count}</div>
-                  {/* <CIcon size="xl" icon={item.payment.icon} /> */}
-                </CTableDataCell>
-                {/* <CTableDataCell>
-                  <div className="small text-medium-emphasis">Last login</div>
-                  <strong>{item.activity}</strong>
-                </CTableDataCell> */}
-              </CTableRow>
-            ))}
-          </CTableBody>
-        </CTable>
+      <CCol xs={8}>
+        <CCard className="mb-4">
+          <CCardHeader>Number of Data Frames in Each Cluster</CCardHeader>
+          <CCardBody>
+            <CChartBar
+              data={{
+                labels: ['Cluster 1', 'Cluster 2', 'Cluster 3', 'Cluster 4', 'Cluster 5', 'Cluster 6'],
+                datasets: [
+                  {
+                    label: 'Number of Data Frames',
+                    backgroundColor: '#008080',
+                    data: [28,10,12,13,15,9,12],
+                  },
+                ],
+              }}
+              labels="months"
+            />
+          </CCardBody>
+        </CCard>
+      </CCol>
+<CTable align="middle" className="mb-0 border" hover responsive>
+  <CTableHead color="light">
+    <CTableRow>
+      <CTableHeaderCell>File Name</CTableHeaderCell>
+      <CTableHeaderCell>Number of Columns</CTableHeaderCell>
+      <CTableHeaderCell>Size</CTableHeaderCell>
+      <CTableHeaderCell>Line Count</CTableHeaderCell>
+    </CTableRow>
+  </CTableHead>
+  <CTableBody>
+    {data.map((item, index) => (
+      <CTableRow
+        key={index}
+        style={{ backgroundColor: index % 2 === 0 ? '#f9f9f9' : 'white' }} // Alternate row colors
+      >
+        <CTableDataCell>
+          <div>{item.name}</div>
+        </CTableDataCell>
+        <CTableDataCell>
+          <div>{item.columns}</div>
+        </CTableDataCell>
+        <CTableDataCell>
+          <div>{item.size}</div>
+        </CTableDataCell>
+        <CTableDataCell>
+          <div>{item.line_count}</div>
+        </CTableDataCell>
+      </CTableRow>
+    ))}
+  </CTableBody>
+</CTable>
+
       </CRow>
     </>
   )
