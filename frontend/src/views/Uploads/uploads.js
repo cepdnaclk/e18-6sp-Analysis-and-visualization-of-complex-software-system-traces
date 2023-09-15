@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileUpload } from '@fortawesome/free-solid-svg-icons';
 import './FileUploadPage.css'; // Import your custom CSS for styling
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const FileUploadPage = () => {
+  const navigate = useNavigate();
+
   const onDrop = useCallback(async (acceptedFiles) => {
     // Handle the uploaded files here
     console.log('Accepted files:', acceptedFiles);
@@ -20,7 +23,7 @@ const FileUploadPage = () => {
 
     try {
       // Make an HTTP POST request to your backend to upload the files
-      const response = await axios.post('http://localhost:5000/upload', formData, {
+      const response = await axios.post('http://127.0.0.1:5000/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data', // Set the content type to multipart/form-data
         },
@@ -28,11 +31,17 @@ const FileUploadPage = () => {
 
       // Handle the response from the server
       console.log('Server response:', response.data);
+
+      // Check the response and navigate to a new page if needed
+      if (response.data.success) {
+        // Redirect to the new page with the filename as a URL parameter
+        navigate(`/showhead/${response.data.filename}`);
+      }
     } catch (error) {
       // Handle any errors that occur during the request
       console.error('Error uploading files:', error);
     }
-  }, []);
+  },); // Include history in the dependencies array
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
