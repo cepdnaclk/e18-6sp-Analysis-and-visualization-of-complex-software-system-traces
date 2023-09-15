@@ -19,7 +19,7 @@ const AboutUsPage = () => {
           <h2>Team Members</h2>
           <ul>
             <li>Ishan Fernando - <a href="mailto:e18098@eng.pdn.ac.lk">e18098@eng.pdn.ac.lk</a></li>
-            <li>Adeela Fernando - <a href="mailto:e18100@eng.pdn.ac.lk">e18100@eng.pdn.ac.lk</a></li>
+            <li>Adeepa Fernando - <a href="mailto:e18100@eng.pdn.ac.lk">e18100@eng.pdn.ac.lk</a></li>
             <li>Ridma Jayasundara - <a href="mailto:e18155@eng.pdn.ac.lk">e18155@eng.pdn.ac.lk</a></li>
           </ul>
         </div>
