@@ -41,7 +41,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'View',
-    to: '/showhead/tmp1.txt',
+    to: '/showhead/',
     icon: <CIcon icon={cilFile} customClassName="nav-icon" />,
   },
   {
