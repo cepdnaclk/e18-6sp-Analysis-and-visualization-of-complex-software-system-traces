@@ -11,10 +11,9 @@ const imageUrl = 'https://static.semrush.com/lfa/static/media/AdvantageSection.3
         <Container>
           <Row>
             <Col md={8} className="text-center text-md-left">
-              <h1 className="display-4">Welcome to Log Analyzer</h1>
+              <h1 className="display-4">Welcome to Exactsoft Analyser </h1>
               <p className="lead">
-              Analyse and visualize your log files like never before.
-              </p>
+              Empower Q&A engineers with AI-driven trace analysis for fintech apps.</p>
               <Button variant="primary" size="lg">
                 Get Started
               </Button>

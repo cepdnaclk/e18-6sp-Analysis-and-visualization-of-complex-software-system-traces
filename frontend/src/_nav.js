@@ -40,7 +40,7 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'View Head',
+    name: 'View',
     to: '/showhead/tmp1.txt',
     icon: <CIcon icon={cilFile} customClassName="nav-icon" />,
   },
