@@ -13,6 +13,7 @@ import {
   cilSpeedometer,
   cilStar,
   cilCloudUpload,
+  cilFile
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
@@ -38,29 +39,16 @@ const _nav = [
     icon: <CIcon icon={cilCloudUpload} customClassName="nav-icon" />,
   },
   {
-    component: CNavGroup,
-    name: 'Buttons',
-    to: '/buttons',
-    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Buttons',
-        to: '/buttons/buttons',
-      },
-    ],
+    component: CNavItem,
+    name: 'View Head',
+    to: '/showhead/tmp1.txt',
+    icon: <CIcon icon={cilFile} customClassName="nav-icon" />,
   },
   {
-    component: CNavGroup,
-    name: 'Forms',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Form Control',
-        to: '/forms/form-control',
-      },
-    ],
+    component: CNavItem,
+    name: 'Analytics',
+    to: '/analytics',
+    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,

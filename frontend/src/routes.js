@@ -55,6 +55,8 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 const Uploads = React.lazy(() => import('./views/Uploads/uploads.js'))
 const AboutUs = React.lazy(() => import('./views/AboutUs/aboutus.js'))
 const ShowHead = React.lazy(()=> import('./views/ShowHead/showhead.js'))
+const analytics = React.lazy(() => import('./views/Analytics/analytics.js'))
+
 
 const routes = [
   { path: '/', exact: true, name: '', element: Home },
@@ -104,6 +106,7 @@ const routes = [
   { path: '/uploads', name: 'Uploads', element: Uploads },
   { path: '/aboutus', name: 'About Us', element: AboutUs },
   { path: '/showhead/:filename', name: 'Show Head', element: ShowHead },
+  { path: '/analytics', name: 'Analytics', element: analytics }
 ]
 
 
