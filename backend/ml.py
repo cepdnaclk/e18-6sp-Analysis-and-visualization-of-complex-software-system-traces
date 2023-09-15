@@ -33,7 +33,7 @@ def getPrediction(filePath):
     # Compare the new log file columns with each cluster's word set
     for cluster_num, cluster_words in cluster_word_sets.items():
         sim_score = similarity(new_log_columns, cluster_words)
-        predictions[int(cluster_num) + 1] = sim_score
+        predictions[int(cluster_num)] = sim_score
 
     # Print the cluster that the new log file belongs to
     return predictions
