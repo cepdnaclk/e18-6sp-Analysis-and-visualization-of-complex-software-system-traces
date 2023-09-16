@@ -47,4 +47,14 @@
 
 /* Add any additional styles you may need */
 
+/* Add a class for the images to make them smaller */
+.img-small {
+  max-width: 800px; /* Adjust the max-width as needed */
+  height: auto;
+}
+.image-container {
+  /* display: flex; */
+  justify-content: center;
+}
+
 

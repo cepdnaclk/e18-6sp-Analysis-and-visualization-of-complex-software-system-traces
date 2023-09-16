@@ -1,32 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { CCard, CCardHeader, CCardBody, CRow, CCol } from '@coreui/react';
-import { CChartBar, CChartScatter } from '@coreui/react-chartjs';
-import { Link } from 'react-router-dom';  // Import Link from react-router-dom
-import image1 from './image1.png';
-import './analytics.css';  // Import a CSS file for custom styles
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import { CCard, CCardHeader, CCardBody, CRow, CCol } from '@coreui/react'
+import { CChartBar, CChartScatter } from '@coreui/react-chartjs'
+import { Link } from 'react-router-dom' // Import Link from react-router-dom
+import image1 from './image1.png'
+import image4 from './image4.png'
+
+import './analytics.css' // Import a CSS file for custom styles
 
 const DescriptionComponent = () => {
   return (
     <div className="description">
       <p>
-      This approach represents an intermediate step between log hashing and regular expressions.      </p>
+        This approach represents an intermediate step between log hashing and regular expressions.{' '}
+      </p>
     </div>
-  );
-};
+  )
+}
 
 const DescriptionComponent2 = () => {
   return (
     <div className="description">
       <p>
-      Employing a brute-force string comparison method, comparing each log message with others., two messages are considered part of different templates if they differ by at least 20% of their content, determined by the total length of common non-intersecting substrings larger than three characters      </p>
+        Employing a brute-force string comparison method, comparing each log message with others.,
+        two messages are considered part of different templates if they differ by at least 20% of
+        their content, determined by the total length of common non-intersecting substrings larger
+        than three characters{' '}
+      </p>
     </div>
-  );
-};
+  )
+}
 
 const Dashboard = () => {
-  const [chartData, setChartData] = useState({ labels: [], datasets: [] });
-  const [scatterData, setScatterData] = useState({ datasets: [] });
+  const [chartData, setChartData] = useState({ labels: [], datasets: [] })
+  const [scatterData, setScatterData] = useState({ datasets: [] })
 
   useEffect(() => {
     // Make an HTTP GET request to fetch data from the API
@@ -34,20 +41,20 @@ const Dashboard = () => {
       .get('http://127.0.0.1:5000/predictions')
       .then((response) => {
         if (response && response.data) {
-          const data = response.data;
-          const firstElement = Object.values(data)[0];
+          const data = response.data
+          const firstElement = Object.values(data)[0]
 
           if (firstElement) {
-            const labels = Object.keys(firstElement);
+            const labels = Object.keys(firstElement)
             const chartData = [
               {
                 label: 'Similarity',
                 backgroundColor: '#117E8E',
                 data: Object.values(firstElement),
               },
-            ];
+            ]
 
-            setChartData({ labels, datasets: chartData });
+            setChartData({ labels, datasets: chartData })
 
             const scatterDataset = {
               label: 'Cluster Visualization',
@@ -60,20 +67,20 @@ const Dashboard = () => {
                 { x: -0.44202036535002687, y: -0.5339749522107007 },
                 { x: 0.6058073576057241, y: -0.012386085091157536 },
               ],
-            };
+            }
 
-            setScatterData({ datasets: [scatterDataset] });
+            setScatterData({ datasets: [scatterDataset] })
           } else {
-            console.error('No data available in the response.');
+            console.error('No data available in the response.')
           }
         } else {
-          console.error('Invalid response format.');
+          console.error('Invalid response format.')
         }
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
+        console.error('Error fetching data:', error)
+      })
+  }, [])
 
   return (
     <>
@@ -81,9 +88,9 @@ const Dashboard = () => {
         <CCol md={12}>
           <div className="topic-heading-fancy">Template Based Approach</div>
           <center>
-          <Link to="/template">
-            <button className="route-button">Go to Template</button>
-          </Link>
+            <Link to="/template">
+              <button className="route-button">Go to Template</button>
+            </Link>
           </center>
           <DescriptionComponent />
         </CCol>
@@ -106,13 +113,15 @@ const Dashboard = () => {
         <center>
           <CCol md={9}>
             <center>
-              <img src={image1} alt="Description of the image" />
+              <img src={image1} alt="Description of the " />
+              <h2>Template Dendogram</h2>
+              <img src={image4} alt="Description of the" className="img-small" />
             </center>
           </CCol>
         </center>
       </CRow>
     </>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard
