@@ -18,9 +18,9 @@ title: Analysis and Visualization of Complex Software System Traces
 
 
 ## Team
--  E/18/098, Ishan Fernando, [e18098@eng.pdn.ac.lk](mailto:e18098@eng.pdn.ac.lk)
--  E/18/100, Adeepa Fernando, [e18100@eng.pdn.ac.lk](mailto:e18100@eng.pdn.ac.lk)
--  E/18/155, Ridma Jayasundara, [e18155@eng.pdn.ac.lk](mailto:e18155@eng.pdn.ac.lk)
+-  E/18/098, Fernando KAI, [e18098@eng.pdn.ac.lk](mailto:e18098@eng.pdn.ac.lk)
+-  E/18/100, Fernando KNA, [e18100@eng.pdn.ac.lk](mailto:e18100@eng.pdn.ac.lk)
+-  E/18/155, Jayasundara JWKRB, [e18155@eng.pdn.ac.lk](mailto:e18155@eng.pdn.ac.lk)
 
 ## Table of Contents
 1. [Introduction](#introduction)
